@@ -1,18 +1,29 @@
+/* =================
+Setup
+================= */
+
+html {
+    margin:0px;
+}
+
 body {
     margin: 0px;
     font-size: 16px;
     font-size: 1.125rem;
-    color: #707070
+    color: #707070;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-img {
-    max-width: 100%;
-}
+/* =================
+Typography
+================= */
 
-h1{
-    font-size: 3rem;
-    color: #312614;
-    text-align: center;
+h1{  
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    font-size: 3.375rem;
+    color: #143774;
+    margin: 0px;
 }
 
 h2 {
@@ -23,9 +34,82 @@ ul {
     font-size: 1rem;
 }
 
+.site-subtitle {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #1792D2;
+    margin: 0px;
+    text-transform: uppercase;
+}
+
 .accent {
     color: #b7832f    
 }
+
+
+
+
+/* =================
+Layout
+================= */
+
+header {
+    background-color: #f8f8f8;
+    margin:0px;
+    padding: 2em 0;
+}
+
+/* Navigation */
+
+nav {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 1rem;
+    color: #707070;
+    margin:0px;
+}
+
+nav li {
+    margin-left: 2em;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0px;
+    display:flex;
+    justify-content: center;
+}
+
+nav a {
+    text-decoration: none;
+    color: #707070;
+    padding: 0 0 0.25em 0;
+}
+
+nav a:hover,
+nav a:focus {
+    color:#1792D2;
+    border-bottom: 3px solid #1792D2;
+}
+
+.current-page {
+    border-bottom: 1px solid #707070;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
 
 .test-div {
     background-color: green;
@@ -38,7 +122,13 @@ ul {
     width: 95%;
     max-width: 960px;
     margin: 0 auto;
-    border: .5px solid magenta;
+    /* border: .5px solid magenta; */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .columns {
@@ -46,7 +136,6 @@ ul {
     display: flex;
     justify-content: space-between;
     margin: 0.5em 0;
-    /* align-items: stretch; */
 }
 
 .col {
@@ -75,12 +164,49 @@ ul {
     margin: 0 auto;
 }
 
-@media (max-width: 600px) {
+
+/* =================
+Media Queries
+================= */
+
+@media (max-width: 900px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav li {
+        margin: 0 1em;
+    }
+
+    header {
+        padding-bottom: 1em
+    }
+}
+
+@media (max-width: 675px) {
+
     .columns {
-        display: flex;
         flex-direction: column;
     }
     .col {
         width:95%;
     }
 }
+
+@media (max-width: 400px) {
+    .nav-list {
+        flex-direction: column;
+    }
+
+    nav li {
+        margin: 0.5em
+    }
+    
+    header {
+        padding-bottom: 0px;
+    }
+
+}
+
+
