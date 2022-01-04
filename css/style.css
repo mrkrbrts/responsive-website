@@ -46,7 +46,7 @@ ul {
     display: flex;
     justify-content: space-between;
     margin: 0.5em 0;
-    align-items: stretch;
+    /* align-items: stretch; */
 }
 
 .col {
@@ -73,4 +73,14 @@ ul {
 
 .center {
     margin: 0 auto;
+}
+
+@media (max-width: 600px) {
+    .columns {
+        display: flex;
+        flex-direction: column;
+    }
+    .col {
+        width:95%;
+    }
 }
