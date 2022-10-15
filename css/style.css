@@ -1,28 +1,35 @@
 /* =================
-Setup
+Global
 ================= */
-
-html {
-    margin:0px;
-}
 
 body {
     margin: 0px;
     font-size: 16px;
     font-size: 1.125rem;
+    font-weight: 300;
     color: #707070;
     font-family: 'Ubuntu', sans-serif;
 }
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
 
 /* =================
 Typography
 ================= */
 
-h1{  
+h1,h2,h3,h4,h5,h6 {
     font-family: 'Lora', serif;
     font-weight: 700;
-    font-size: 3.375rem;
     color: #143774;
+    margin-top: 0px;
+}
+
+h1{  
+    font-size: 3.375rem;
     margin: 0px;
 }
 
@@ -30,8 +37,16 @@ h2 {
     font-size: 1.5rem;
 }
 
+h3 {
+    font-size: 1.2rem;
+}
+
 ul {
     font-size: 1rem;
+}
+
+strong {
+    font-weight: bolder;
 }
 
 .site-subtitle {
@@ -43,15 +58,48 @@ ul {
     text-transform: uppercase;
 }
 
-.accent {
-    color: #b7832f    
+.article-info {
+    color: #707070;
+    font-size: 0.875rem;
+    margin: 1.5em 0;
+}
+
+.sidebar-title {
+    font-size: 1rem
+}
+
+
+/* =================
+Links & Interactivitiy
+================= */
+
+a {
+    color: #1792D2
+}
+
+a:hover,
+a:focus {
+    color: #143774
+}
+
+.article-continue {
+    color: #1792D2;
+    font-size: 0.875rem;
+    text-transform:uppercase;
+    font-weight: bold;
+    text-decoration:none;
+}
+
+.article-continue:hover,
+.article-continue:focus {
+    color: #143774;
+    text-decoration: underline;
 }
 
 
 
-
 /* =================
-Layout
+Header & Navigation
 ================= */
 
 header {
@@ -95,21 +143,35 @@ nav a:focus {
 
 .current-page {
     border-bottom: 1px solid #707070;
-}
-
-img {
-    max-width: 100%;
+    text-transform: uppercase;
 }
 
 
 
+/* =================
+Layout & Structure
+================= */
 
+article {
+    border-bottom: 2px solid #707070;
+    padding: 1em 0
+}
 
+.article-content {
+    order: 2;
+}
 
+.article-decoration {
+    order: 1;
+}
 
+.sidebar-title {
+    order: 2
+}
 
-
-
+.sidebar-img {
+    order: 1;
+}
 
 .test-div {
     background-color: green;
@@ -135,7 +197,7 @@ img {
     /* border: 2px solid green; */
     display: flex;
     justify-content: space-between;
-    margin: 0.5em 0;
+    margin: 0 auto;
 }
 
 .col {
@@ -151,18 +213,31 @@ img {
     width: 20%;
 }
 
-.width75 {
+.width30{
+    width:30%
+}
+
+.width66 {
+    width:66%
+}
+
+.width70 {
     width: 70%;
 }
 
 .sidebar {
-    background-color: #312614;
-    color: white;
+    background-color: #F8F8F8;
+    color: #143774;
+    border: 20px solid #EBEBEB;
+    margin: 1em auto;
+    padding: 1em;
 }
 
 .center {
     margin: 0 auto;
 }
+
+
 
 
 /* =================
@@ -208,5 +283,7 @@ Media Queries
     }
 
 }
+
+
 
 
