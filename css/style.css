@@ -64,7 +64,9 @@ strong {
     margin: 1.5em 0;
 }
 
-
+.sidebar-title {
+    font-size: 1rem
+}
 
 
 /* =================
